@@ -1,7 +1,9 @@
 
 // client interaction functionality setup
 window.onload = function () {
-  var socket = io.connect('http://localhost:3700');
+  //var socket = io.connect('http://localhost:3700');
+  var socket = io.connect(window.location.hostname);
+
   
   // send mouse position updates
   document.onmousemove = function (ev) {
